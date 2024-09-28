@@ -82,7 +82,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 hour12: true
             };
             const localTime = new Date().toLocaleTimeString('en-US', options);
-            timeElement.textContent = `My local time: ${localTime}`;
+            // Only replace the time part, keeping "My local time: " intact
+            timeElement.textContent = timeElement.textContent.replace(/\d{1,2}:\d{2}:\d{2} [AP]M$/, localTime);
         }
     }
 
