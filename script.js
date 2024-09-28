@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 hour12: true
             };
             const localTime = new Date().toLocaleTimeString('en-US', options);
-            timeElement.textContent = `Local Time: ${localTime}`;
+            timeElement.textContent = `My local time: ${localTime}`;
         }
     }
 
