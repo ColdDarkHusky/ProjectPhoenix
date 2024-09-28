@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather - Your Digital Playground</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Weather</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="weather" class="card">
+            <h2>Current Weather</h2>
+            <div id="weather-info">
+                <p>Enter a city to get the current weather:</p>
+                <input type="text" id="city-input" placeholder="Enter city name">
+                <button id="get-weather">Get Weather</button>
+                <div id="weather-data"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Your Name | Embracing the digital chaos</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

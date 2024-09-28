@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Page Title</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Replace the existing header with this in all HTML files -->
+    <header>
+        <h1>:3</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li id="local-time">Local Time: </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <a href="quote.html" class="card">
+            <section id="quote-preview">
+                <h2>Quote of the Day</h2>
+                <p>Get inspired with our daily quotes.</p>
+            </section>
+        </a>
+
+        <a href="portfolio.html" class="card">
+            <section id="portfolio">
+                <h2>Portfolio Showcase</h2>
+                <p>My creative endeavors</p>
+            </section>
+        </a>
+
+        <a href="cars.html" class="card">
+            <section id="cars">
+                <h2>Car Enthusiast Corner</h2>
+                <p>Porsche 911 & Nissan R34</p>
+            </section>
+        </a>
+
+        <a href="mental-health.html" class="card">
+            <section id="mental-health">
+                <h2>Mental Health Resources</h2>
+                <p>Nurturing the mind</p>
+            </section>
+        </a>
+
+        <a href="music.html" class="card">
+            <section id="music">
+                <h2>Music Gallery</h2>
+                <p>Sounds that inspire</p>
+            </section>
+        </a>
+
+        <a href="weather.html" class="card">
+            <div class="weather-card">
+                <h2>Weather</h2>
+                <p>Check local conditions</p>
+            </div>
+        </a>
+
+        <a href="projects.html" class="card">
+            <div class="project-card">
+                <h2>Current Projects</h2>
+                <p>Ongoing work</p>
+            </div>
+        </a>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Your Name | Embracing the digital chaos</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <!-- Add this script tag just before the closing </body> tag -->
+    <script>
+        function updateSpokaneTime() {
+            const timeElement = document.getElementById('local-time');
+            if (timeElement) {
+                const options = {
+                    timeZone: 'America/Los_Angeles',
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    second: '2-digit',
+                    hour12: true
+                };
+                const spokaneTime = new Date().toLocaleTimeString('en-US', options);
+                timeElement.textContent = `My Local Time: ${spokaneTime}`;
+            }
+        }
+
+        // Update time every second
+        setInterval(updateSpokaneTime, 1000);
+
+        // Initial call to display time immediately
+        updateSpokaneTime();
+    </script>
+</body>
+</html>
