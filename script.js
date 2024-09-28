@@ -72,24 +72,32 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    function updateLocalTime() {
-        const timeElement = document.getElementById('local-time');
-        if (timeElement) {
-            const options = {
-                hour: '2-digit',
-                minute: '2-digit',
-                second: '2-digit',
-                hour12: true
-            };
-            const localTime = new Date().toLocaleTimeString('en-US', options);
-            // Only replace the time part, keeping "My local time: " intact
-            timeElement.textContent = timeElement.textContent.replace(/\d{1,2}:\d{2}:\d{2} [AP]M$/, localTime);
-        }
+    // Function to toggle the mobile menu
+    function toggleMobileMenu() {
+        const menu = document.querySelector('.menu');
+        menu.classList.toggle('active');
     }
 
-    // Update time every second
-    setInterval(updateLocalTime, 1000);
+    // Event listener for the mobile menu toggle
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const menuToggle = document.querySelector('.menu-toggle');
+        if (menuToggle) {
+            menuToggle.addEventListener('click', toggleMobileMenu);
+        }
+    });
 
-    // Initial call to display time immediately
-    updateLocalTime();
+    // Function to handle form submission
+    function handleSubmit(event) {
+        event.preventDefault();
+        // Add your form submission logic here
+        console.log('Form submitted');
+    }
+
+    // Event listener for form submission
+    const form = document.querySelector('form');
+    if (form) {
+        form.addEventListener('submit', handleSubmit);
+    }
+
+    // Add any other JavaScript functionality you need here
 });
