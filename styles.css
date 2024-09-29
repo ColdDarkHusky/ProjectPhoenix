@@ -335,3 +335,35 @@ header nav ul {
     margin: 0;
     font-size: 0.9em;
 }
+
+.quote-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 30px;
+    max-width: 600px;
+    width: 90%;
+    margin-bottom: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 200px; /* Adjust this value as needed */
+    max-height: 400px; /* Adjust this value as needed */
+    overflow-y: auto;
+}
+
+#quote-text {
+    font-style: italic;
+    font-size: 1.3em;
+    margin-bottom: 1em;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+#quote-author {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-top: auto;
+}
