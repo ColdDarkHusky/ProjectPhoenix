@@ -19,6 +19,7 @@ header {
   background-color: var(--accent-color);
   padding: 2rem;
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  margin-bottom: 2rem;
 }
 
 h1 {
@@ -168,6 +169,10 @@ footer {
 #quote {
     max-width: 600px;
     margin: 2rem auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 30px;
 }
 
 #quote-content {
@@ -186,10 +191,10 @@ footer {
 #quote-author {
     font-weight: bold;
     font-size: 1.2em;
+    margin-bottom: 1.5em;
 }
 
 #new-quote {
-    margin-top: 2em;
     padding: 0.7em 1.5em;
     font-size: 1em;
     background-color: var(--accent-color);
