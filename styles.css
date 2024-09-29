@@ -54,12 +54,11 @@ nav ul li a:hover {
 }
 
 main {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  padding: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 200px); /* Adjust based on header and footer height */
+  padding: 20px 0;
 }
 
 /* Update the .card style */
@@ -167,12 +166,10 @@ footer {
 }
 
 #quote {
-    max-width: 600px;
-    margin: 2rem auto;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
 #quote-content {
@@ -341,19 +338,13 @@ header nav ul {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     padding: 30px;
-    max-width: 600px;
-    width: 90%;
-    margin-bottom: 20px;
+    width: 400px; /* Fixed width */
+    max-width: 90%;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 200px; /* Adjust this value as needed */
-    max-height: 400px; /* Adjust this value as needed */
-    overflow-y: auto;
-    height: 250px; /* Adjust this value as needed */
-    width: 400px; /* Adjust this value as needed */
-    max-width: 90%;
+    min-height: 200px;
 }
 
 #quote-text {
