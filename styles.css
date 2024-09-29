@@ -351,6 +351,9 @@ header nav ul {
     min-height: 200px; /* Adjust this value as needed */
     max-height: 400px; /* Adjust this value as needed */
     overflow-y: auto;
+    height: 250px; /* Adjust this value as needed */
+    width: 400px; /* Adjust this value as needed */
+    max-width: 90%;
 }
 
 #quote-text {
