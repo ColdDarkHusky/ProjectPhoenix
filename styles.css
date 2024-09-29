@@ -332,3 +332,36 @@ header nav ul {
     margin: 0;
     font-size: 1em;
 }
+
+.card-v2 {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-decoration: none;
+    color: #333;
+    width: 280px;
+    height: 160px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 15px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-v2:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.card-v2 h2 {
+    color: #ff6b6b;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.card-v2 p {
+    margin: 0;
+    font-size: 0.9em;
+}
