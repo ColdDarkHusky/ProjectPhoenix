@@ -100,4 +100,52 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Add any other JavaScript functionality you need here
+
+    // Animate the header text
+    anime({
+        targets: 'header h1',
+        opacity: [0, 1],
+        translateY: ['-1em', 0],
+        easing: 'easeOutExpo',
+        duration: 1000,
+        delay: 500
+    });
+
+    // Animate the cards
+    anime({
+        targets: '.card',
+        opacity: [0, 1],
+        translateY: [50, 0],
+        easing: 'easeOutExpo',
+        duration: 1000,
+        delay: anime.stagger(100, {start: 1000})
+    });
+
+    const audioPlayer = document.getElementById('audio-player');
+    const songList = document.getElementById('song-list');
+    const nowPlaying = document.getElementById('now-playing');
+
+    if (songList) {
+        songList.addEventListener('click', (event) => {
+            if (event.target.classList.contains('song-button')) {
+                const song = event.target.dataset.song;
+                const songName = event.target.textContent.trim();
+                
+                audioPlayer.src = `audio/${song}`;
+                audioPlayer.play();
+                
+                nowPlaying.textContent = `Now playing: ${songName}`;
+            }
+        });
+    }
+
+    const cursor = document.querySelector('.custom-cursor');
+
+    document.addEventListener('mousemove', (e) => {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+    });
+
+    document.addEventListener('mousedown', () => cursor.style.transform = 'scale(0.8)');
+    document.addEventListener('mouseup', () => cursor.style.transform = 'scale(1)');
 });
